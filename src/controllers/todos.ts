@@ -41,13 +41,11 @@ const addTodo = async (req: Request, res: Response): Promise<void> => {
 //Update a todo by it's id
 
 const updateTodo = async (req: Request, res: Response): Promise<void> => {
-  console.log("saf", req.params);
   try {
     const {
       params: { id },
       body,
     } = req;
-    console.log("zzzz", req);
     const updatedTodo: ITodo | null = await Todo.findByIdAndUpdate(
       {
         _id: id,
