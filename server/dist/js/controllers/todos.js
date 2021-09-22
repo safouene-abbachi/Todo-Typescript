@@ -28,7 +28,6 @@ exports.getTodo = getTodo;
 //Adding a todo
 const addTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log("===>", req);
         const body = req.body;
         const todo = new todo_1.default({
             name: body.name,
@@ -48,10 +47,8 @@ const addTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.addTodo = addTodo;
 //Update a todo by it's id
 const updateTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log("saf", req.params);
     try {
         const { params: { id }, body, } = req;
-        console.log("zzzz", req);
         const updatedTodo = yield todo_1.default.findByIdAndUpdate({
             _id: id,
         }, body);

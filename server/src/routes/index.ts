@@ -13,6 +13,6 @@ router.post("/addTodo", addTodo);
 //updateTodo
 router.put("/updateTodo/:id", updateTodo);
 //delete todo
-router.delete("/deleteTodo/:id", deleteTodo);
+router.delete("/deleteTodo/:_id", deleteTodo);
 
 export default router;

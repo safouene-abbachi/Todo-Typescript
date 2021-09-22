@@ -32,5 +32,5 @@ router.post("/addTodo", todos_1.addTodo);
 //updateTodo
 router.put("/updateTodo/:id", todos_1.updateTodo);
 //delete todo
-router.delete("/deleteTodo/:id", todos_1.deleteTodo);
+router.delete("/deleteTodo/:_id", todos_1.deleteTodo);
 exports.default = router;
